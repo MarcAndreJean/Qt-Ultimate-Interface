@@ -1,6 +1,14 @@
 #include "ultimateuserinterface.h"
 
-
-UltimateUserInterface::UltimateUserInterface()
-{
+namespace UltimateUserInterface {
+    UltimateUserInterface::UltimateUserInterface()
+    {
+    }
+    DispositionState UltimateUserInterface::getCurrentDispositionState() const
+    {
+        return DispositionState();
+    }
+    void UltimateUserInterface::setCurrentDispositionState(const DispositionState &value)
+    {
+    }
 }

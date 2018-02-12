@@ -23,11 +23,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        ultimateuserinterface.cpp
+        ultimateuserinterface.cpp \
+    disposition-state/dispositionstate.cpp \
+    container/container.cpp
 
 HEADERS += \
         ultimateuserinterface.h \
-        src_global.h 
+        src_global.h \ 
+    abstractultimateuserinterface.h \
+    disposition-state/dispositionstate.h \
+    container/container.h \
+    container/abstractcontainer.h
 
 unix {
     target.path = /usr/lib

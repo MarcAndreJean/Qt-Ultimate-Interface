@@ -2,12 +2,19 @@
 #define ULTIMATEUSERINTERFACE_H
 
 #include "src_global.h"
+#include "abstractultimateuserinterface.h"
+#include <QObject>
 
-class SRCSHARED_EXPORT UltimateUserInterface
-{
+namespace UltimateUserInterface {
+    class SRCSHARED_EXPORT UltimateUserInterface : public QObject, public AbstractUltimateUserInterface
+    {
+    public:
+        UltimateUserInterface();
+        DispositionState getCurrentDispositionState() const override;
+        void setCurrentDispositionState( const DispositionState& ) override;
+    protected:
 
-public:
-    UltimateUserInterface();
-};
+    };
+}
 
 #endif // ULTIMATEUSERINTERFACE_H
